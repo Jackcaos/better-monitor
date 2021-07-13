@@ -1,1 +1,3 @@
-let a: number = 123;
+import Client from './client';
+
+export default Client;
