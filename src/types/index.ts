@@ -1,5 +1,10 @@
-import { IClient } from './client'
+import { IClient, IClientConfig, IMonitor } from './client'
+import { IGlobal, IGlobalJSMonitor } from './global'
 
 export {
-  IClient
+  IClient,
+  IClientConfig,
+  IMonitor,
+  IGlobal,
+  IGlobalJSMonitor
 }

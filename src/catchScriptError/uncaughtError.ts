@@ -5,3 +5,7 @@ function errorListener(e: ErrorEvent) {
 export function catchUncaughtError() {
   window.addEventListener('error', errorListener, true)
 }
+
+export function removeCatchUncaughtError() {
+  window.removeEventListener('error', errorListener, true)
+}
