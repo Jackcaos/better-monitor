@@ -1,10 +1,10 @@
-import { IClientConfig } from './types'
+import { IClientConfig } from './types';
 
 class Client {
-  readonly _config: IClientConfig
+  readonly _config: IClientConfig;
 
   constructor(config: IClientConfig) {
-    this._config = config
+    this._config = config;
   }
 
   notify() {

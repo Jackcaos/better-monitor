@@ -1,14 +1,14 @@
-import { IClient } from './client'
+import { IClient } from './client';
 
 interface IGlobalJSMonitor {
-  client: IClient
+  client: IClient;
 }
 
 interface IGlobal {
-  __JSMONITOR__: IGlobalJSMonitor
+  __JSMONITOR__: IGlobalJSMonitor;
 }
 
 export {
   IGlobalJSMonitor,
-  IGlobal
-}
+  IGlobal,
+};

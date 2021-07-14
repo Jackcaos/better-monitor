@@ -1,11 +1,15 @@
+import { getEnvGlobal } from '../utils/getWindow';
+
 function errorListener(e: ErrorEvent) {
-  console.log(e)
+  console.log(e);
 }
 
 export function catchUncaughtError() {
-  window.addEventListener('error', errorListener, true)
+  const global = getEnvGlobal<Window>();
+  global?.addEventListener('error', errorListener, true);
 }
 
 export function removeCatchUncaughtError() {
-  window.removeEventListener('error', errorListener, true)
+  const global = getEnvGlobal<Window>();
+  global.removeEventListener('error', errorListener, true);
 }
