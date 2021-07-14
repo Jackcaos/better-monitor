@@ -7,9 +7,7 @@ class Client {
     this._config = config;
   }
 
-  notify() {
-
-  }
+  notify() {}
 
   // start() {
   //   catchScriptError()

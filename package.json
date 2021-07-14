@@ -22,11 +22,7 @@
   "lint-staged": {
     "*.{ts,js}": [
       "eslint --config .eslintrc.js"
-    ],
-    "*.{ts,js,json,md}": [
-      "prettier --write"
-    ],
-    "**/*": "prettier --write ."
+    ]
   },
   "dependencies": {},
   "devDependencies": {
@@ -38,7 +34,7 @@
     "eslint": "^7.30.0",
     "eslint-config-ali": "^12.1.0",
     "eslint-plugin-import": "^2.23.4",
-    "husky": "^7.0.1",
+    "husky": "^4.3.8",
     "lint-staged": "^11.0.1",
     "prettier": "^2.3.2",
     "rollup": "^2.53.1",

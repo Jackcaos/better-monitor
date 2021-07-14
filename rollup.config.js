@@ -9,9 +9,5 @@ export default {
     format: 'umd',
     name: 'index',
   },
-  plugins: [
-    resolve(),
-    commonjs(),
-    typescript(),
-  ],
+  plugins: [resolve(), commonjs(), typescript()],
 };

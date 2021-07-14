@@ -5,6 +5,4 @@ interface IActions {
   timestamp: string;
 }
 
-export {
-  IActions,
-};
+export { IActions };

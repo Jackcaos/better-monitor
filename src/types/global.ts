@@ -8,7 +8,4 @@ interface IGlobal {
   __JSMONITOR__: IGlobalJSMonitor;
 }
 
-export {
-  IGlobalJSMonitor,
-  IGlobal,
-};
+export { IGlobalJSMonitor, IGlobal };

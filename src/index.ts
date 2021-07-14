@@ -5,7 +5,7 @@ import { catchScriptError } from './catchScriptError';
 
 function createClient(config: IClientConfig): IClient {
   const global = getEnvGlobal<Window>();
-  const client = (new Client(config)) as IClient;
+  const client = new Client(config) as IClient;
   global.__JSMONITOR__ = { client };
 
   initJSMonitor();

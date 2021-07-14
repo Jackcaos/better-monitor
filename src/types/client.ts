@@ -25,8 +25,4 @@ interface IMonitor {
   customNotify: () => Promise<any>;
 }
 
-export {
-  IClient,
-  IClientConfig,
-  IMonitor,
-};
+export { IClient, IClientConfig, IMonitor };
