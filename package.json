@@ -19,6 +19,15 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --config .eslintrc.js"
+    ],
+    "*.{ts,js,json,md}": [
+      "prettier --write"
+    ],
+    "**/*": "prettier --write ."
+  },
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
@@ -29,6 +38,7 @@
     "eslint-config-ali": "^12.1.0",
     "eslint-plugin-import": "^2.23.4",
     "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
     "prettier": "^2.3.2",
     "rollup": "^2.53.1",
     "rollup-plugin-commonjs": "^10.1.0",
