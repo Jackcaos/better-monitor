@@ -1,4 +1,4 @@
-import { IGlobal } from '../types';
+import { IGlobal, IGlobalJSMonitor } from '../types';
 
 export function getEnvGlobal<T = Window>(): T & IGlobal {
   return (
@@ -7,4 +7,9 @@ export function getEnvGlobal<T = Window>(): T & IGlobal {
         global : typeof self !== 'undefined' ?
           self : {}
   ) as T & IGlobal;
+}
+
+export function getGlobalClient<T = Window>(): IGlobalJSMonitor {
+  const global = getEnvGlobal<T>();
+  return global.__JSMONITOR__;
 }

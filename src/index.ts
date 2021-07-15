@@ -1,7 +1,7 @@
 import Client from './client';
 import { IClientConfig, IMonitor, IClient } from './types';
 import { getEnvGlobal } from './utils/getWindow';
-import { catchScriptError } from './catchScriptError';
+import { initScriptError } from './catchScriptError';
 
 function createClient(config: IClientConfig): IClient {
   const global = getEnvGlobal<Window>();
@@ -14,7 +14,7 @@ function createClient(config: IClientConfig): IClient {
 }
 
 function initJSMonitor() {
-  catchScriptError();
+  initScriptError();
 }
 
 const JSMonitor: IMonitor = {

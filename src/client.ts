@@ -1,4 +1,4 @@
-import { IClientConfig } from './types';
+import { IClientConfig, INotifyMessage } from './types';
 
 class Client {
   readonly _config: IClientConfig;
@@ -7,10 +7,8 @@ class Client {
     this._config = config;
   }
 
-  notify() {}
-
-  // start() {
-  //   catchScriptError()
-  // }
+  notify<T>(e: INotifyMessage<T>) {
+    console.log(e);
+  }
 }
 export default Client;

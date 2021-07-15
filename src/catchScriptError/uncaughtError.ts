@@ -1,7 +1,8 @@
 import { getEnvGlobal } from '../utils/getWindow';
+import { dispatchScriptError } from './notify';
 
 function errorListener(e: ErrorEvent) {
-  console.log(e);
+  dispatchScriptError(e);
 }
 
 export function catchUncaughtError() {

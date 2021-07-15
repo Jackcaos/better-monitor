@@ -1,4 +1,5 @@
 import { IActions } from './action';
+import { ErrorType } from './error';
 
 interface IClientConfig {
   id: number;
@@ -6,7 +7,7 @@ interface IClientConfig {
   maxActions?: number;
   delay?: number; // 错误处理间隔时间
   ignoreError?: string[]; // 可忽略错误
-  notified?: () => Promise<any> | any;
+  beforeNotify?: () => Promise<any> | any;
 }
 
 interface IClient {
@@ -16,7 +17,7 @@ interface IClient {
   };
   readonly _actions: IActions[];
   addAction: (actions: IActions) => void;
-  notify: () => Promise<any>;
+  notify: <T = any>(e: INotifyMessage<T>) => Promise<any>;
 }
 
 interface IMonitor {
@@ -25,4 +26,15 @@ interface IMonitor {
   customNotify: () => Promise<any>;
 }
 
-export { IClient, IClientConfig, IMonitor };
+interface INotifyMessage<T> {
+  id: number;
+  type: ErrorType;
+  detail: T;
+  category: string;
+  timeStamp: number;
+  appType?: string;
+  action?: IActions[];
+  deviceMessage?: string;
+}
+
+export { IClient, IClientConfig, IMonitor, INotifyMessage };
